@@ -33,7 +33,7 @@
         <!-- lombok版本，lombok包可以让开发少写getter、setter、builder等等，相当好用 -->
         <lombok.version>1.18.4</lombok.version>
         <mysql.version>5.1.38</mysql.version>
-        <ali.fastjson.version>1.2.7</ali.fastjson.version>
+        <ali.fastjson.version>1.2.25</ali.fastjson.version>
         <druid.version>1.1.10</druid.version>
         <java.jwt.version>3.5.0</java.jwt.version>
     </properties>
