@@ -12,6 +12,8 @@ eureka:
   client:
     # 消费者需要向eureka server注册，以后Gateway要向server拉取消费者实例
     register-with-eureka: true
+    # 从eureka server中拉取注册的eureka client实例信息
+    fetch-registry: true
     service-url:
       # 消费者需要向eureka server获取生产者地址，多个之间使用【,】隔开
       defaultZone: http://eureka01:7001/eureka/
