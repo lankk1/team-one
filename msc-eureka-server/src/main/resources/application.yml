@@ -20,12 +20,12 @@ eureka:
     # 租期，即心跳，当前client每隔这个时间会主动向server发起一次心跳，表明当前服务仍正常存活，单位秒
     # eureka server配置这个属性是为了后面做集群
     lease-renewal-interval-in-seconds: 2
-    # server监听的某个client A 如果距离上次心跳时间超过lease-expiration-duration-in-seconds后仍未监听到 A 的心跳，
+    # server监听的某个client A 如果距离上次心跳时间超过 lease-expiration-duration-in-seconds 后仍未监听到 A 的心跳，
     # 则认为 A 挂掉了，并将其从正常实例中剔除，单位秒
     lease-expiration-duration-in-seconds: 6
   client:
     # 表示是否向(别的)注册中心注册自己
-    register-with-eureka: true
+    register-with-eureka: false
     # client端是否去server端拉取注册实例信息，在这里是server端，所以配置false
     fetch-registry: false
   server:
