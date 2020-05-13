@@ -5,7 +5,7 @@ server:
 
 spring:
   application:
-    # 服务名称，在微服务架构中具有唯一性，使用服务名可以找到对应的服务
+    # 服务名称，集群中的每个实例的服务名称是相同的
     name: msc-consumer
 
 eureka:
