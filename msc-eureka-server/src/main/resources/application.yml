@@ -5,7 +5,7 @@ server:
 
 spring:
   application:
-    # 服务名称，在微服务架构中具有唯一性，使用服务名可以找到对应的服务
+    # 服务名称，集群中的每个实例的服务名称是相同的
     name: msc-eureka-server
 
 # spring-cloud-starter-netflix-eureka-server依赖中既有eureka-server，也有eureka-client，
@@ -29,6 +29,9 @@ eureka:
     # client端是否去server端拉取注册实例信息，在这里是server端，所以配置false
     fetch-registry: false
   server:
-    # 自我保护机制开启,如果在15分钟内超过85%的节点都没有正常的心跳，那么Eureka就认为客户端与注册中心出现了网络故障
+    # 自我保护机制开启，该模式被激活后，它不会从注册列表中剔除因长时间没收到心跳导致租期过期的服务，
+    # 而是等待修复，直到心跳恢复正常之后，它自动退出自我保护模式。
     enable-self-preservation: true
+    # 自我保护机制开启的阈值，
+    # 如果在15分钟内超过（100% - 85%）的节点都没有正常的心跳回应，那么Eureka server就会开启自我保护机制
     renewal-percent-threshold: 0.85
