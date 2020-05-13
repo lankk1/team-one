@@ -1,0 +1,33 @@
+
+server:
+  # 端口
+  port: 18080
+
+
+spring:
+  application:
+    # 对外暴露的服务名称，集群中的每个实例的服务名称是相同的
+    name: msc-provider
+
+eureka:
+  client:
+    # 提供者需要向eureka server注册本实例，只有注册了才能让别的实例调用自己
+    register-with-eureka: true
+    # 如果本实例不调用别的实例，则不需要向eureka server拉取别的注册实例信息
+    fetch-registry: false
+    service-url:
+      # 向如下的eureka server注册本实例信息
+      defaultZone: http://eureka01:7001/eureka/
+  instance:
+    # 在eureka server注册的实例名称，具有唯一性，在集群内方便定位实例
+    instance-id: 提供者01
+    # 优先使用ip
+    prefer-ip-address: true
+    # 租期，即心跳时间
+    lease-renewal-interval-in-seconds: 2
+
+
+# 自定义属性，在项目中使用
+provider:
+  unique:
+    flag: pvd-01
