@@ -17,5 +17,11 @@ eureka:
     service-url:
       # 消费者需要向eureka server获取生产者地址，多个之间使用【,】隔开
       defaultZone: http://eureka01:7001/eureka/
+  instance:
+    instance-id: 消费者01
 
 
+# 自定义属性
+provider:
+  # msc-provider的地址
+  url: http://localhost:18080/
