@@ -7,41 +7,44 @@
 ## 模块结构
 
 
-## msc-parent
-管理整个项目的版本信息。
+### [msc-parent](https://github.com/lankk1/team-one/tree/master/msc-parent)
+- 管理整个项目的版本信息；
 
 
-## msc-eureka-server
+### [msc-eureka-server](https://github.com/lankk1/team-one/tree/master/msc-eureka-server)
+- 整合Eureka Server；
+- Eureka Server集群配置；
 
 
-## msc-consumer
+### [msc-consumer](https://github.com/lankk1/team-one/tree/master/msc-consumer)
+- 整合Eureka Client；
+- 使用RestTemplate调用msc-provider接口；
+
+### [msc-provider](https://github.com/lankk1/team-one/tree/master/msc-provider)
+- 整合Eureka Client；
+
+### msc-redis
 
 
-## msc-provider
+### msc-shiro
 
 
-## msc-redis
+### msc-mybatis
 
 
-## msc-shiro
+### msc-mybatis-plus
 
 
-## msc-mybatis
+### msc-rocketMQ-producer
 
 
-## msc-mybatis-plus
+### msc-rocketMQ-consumer
 
 
-## msc-rocketMQ-producer
+### msc-springcloud-gateway
 
 
-## msc-rocketMQ-consumer
+### msc-springcloud-config
 
 
-## msc-springcloud-gateway
-
-
-## msc-springcloud-config
-
-
-## msc-springcloud-bus
+### msc-springcloud-bus
