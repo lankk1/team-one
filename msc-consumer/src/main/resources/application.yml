@@ -23,5 +23,5 @@ eureka:
 
 # 自定义属性
 provider:
-  # msc-provider的地址
-  url: http://localhost:18080/
+  # msc-provider的地址，使用RestTemplate调用
+  url-for-rest: http://localhost:18080/

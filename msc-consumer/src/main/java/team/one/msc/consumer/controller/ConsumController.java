@@ -20,10 +20,11 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/csm")
 public class ConsumController {
 
+    @Value("${provider.url-for-rest}")
+    private String providerUrlForRest;
+
     @Autowired
     private RestTemplate restTemplate;
-    @Value("${provider.url}")
-    private String providerUrl;
 
     /**
      * 简单测试
@@ -36,7 +37,7 @@ public class ConsumController {
         log.info("ConsumController.getId,入参id={}", id);
 
         // 访问msc-provider
-        String result = restTemplate.getForObject(providerUrl.concat("/pvd/test/").concat(String.valueOf(id)), String.class);
+        String result = restTemplate.getForObject(providerUrlForRest.concat("/pvd/test/").concat(String.valueOf(id)), String.class);
         log.info(result);
         return "传参：" + id + "，返回：" + result;
     }
