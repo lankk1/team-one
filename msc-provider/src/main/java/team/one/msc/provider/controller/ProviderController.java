@@ -24,6 +24,10 @@ public class ProviderController {
     @Value("${provider.unique.flag:NULL-flag}")
     private String providerFlag;
 
+估计快了就
+    /***
+     * 9800击破简历模板
+     */
     @GetMapping("/test/{id}")
     public String testId(@PathVariable int id) {
         log.info("ProviderController.testId,id={}", id);
